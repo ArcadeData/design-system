@@ -1,0 +1,140 @@
+/*
+ * ArcadeData design tokens. GENERATED from tokens.json by scripts/tokens.py.
+ * Edit tokens.json, run `uv run scripts/tokens.py`, commit both.
+ *
+ * Names: --adb-color-<name> (light and dark), then --adb-font-*, --adb-size-*,
+ * --adb-line-height-*, --adb-space-*, --adb-radius-*, --adb-focus-* (one value).
+ *
+ * Theme: the system setting decides. Set data-theme="light" or data-theme="dark"
+ * on <html> to override it.
+ *
+ * Every text and background pair is checked in both themes by
+ * scripts/contrast.py: 4.5:1 for text, 3:1 for large text, control borders
+ * and the focus ring (WCAG 2.2 AA).
+ */
+
+:root {
+  --adb-color-bg: #FFFFFF; /* Page background. */
+  --adb-color-bg-subtle: #F5F6F7; /* Sidebars, table heads, quiet bands. Docs site: --color-bg-secondary. */
+  --adb-color-bg-accent: #F0F4F8; /* Hover rows, hero bands, notes. Docs site: --color-bg-accent. */
+  --adb-color-surface: #FAFBFC; /* Panels that sit on the page background. Docs site: --color-surface. */
+  --adb-color-card: #FFFFFF; /* Cards, dialogs, dropdowns. Docs site: --color-card. */
+  --adb-color-brand-tint: #E8F4FD; /* Light wash of the brand blue for selected rows and callouts. Studio: --color-brand-light. */
+  --adb-color-border: #E2E8F0; /* Dividers and card edges. Decorative, so no contrast minimum. */
+  --adb-color-border-subtle: #EDF2F7; /* Faint dividers inside a card or table. Decorative. */
+  --adb-color-border-strong: #718096; /* Edges of form controls. Needs 3:1 against the surface it sits on (WCAG 1.4.11). */
+  --adb-color-text: #1A1D23; /* Body text and headings. */
+  --adb-color-text-muted: #4A5568; /* Secondary text, captions, placeholders that carry meaning. */
+  --adb-color-brand: #00AEEE; /* The ArcadeDB blue, for fills (buttons, active tabs, badges) and decoration. Never for text on a light page: 2.53:1 on white. */
+  --adb-color-brand-hover: #0098D4; /* Hover state of a brand fill. Studio: --color-brand-hover. */
+  --adb-color-brand-border: #0E76BC; /* Border of a control that is filled or outlined in the brand blue. Studio: --color-brand-border. */
+  --adb-color-brand-text: #007099; /* The brand blue as text and icons. Same hue as brand, darker on light pages so it passes 4.5:1 (5.56:1 on white). On dark pages it equals brand. */
+  --adb-color-brand-text-hover: #00597A; /* Hover state of brand-text. */
+  --adb-color-on-brand: #0B1D29; /* Text on a brand fill. Dark ink in both themes: white on #00AEEE is 2.53:1. */
+  --adb-color-link: #1565C0; /* Links in running text. Docs site: --color-link. */
+  --adb-color-link-hover: #104D92; /* Hover state of a link. Docs site: --color-link-hover. */
+  --adb-color-focus: #0066CC; /* Keyboard focus ring. Needs 3:1 against the surface. Docs site: --color-focus. */
+  --adb-color-danger: #D32F2F; /* Errors and destructive actions, as text or icon. Pair with words or an icon, never colour alone. */
+  --adb-color-success: #047857; /* Success text or icon. Docs site: --c-green-text. */
+  --adb-color-warning: #B45309; /* Warning text or icon. Docs site: --c-amber-text. */
+  --adb-color-code-bg: #1A1D23; /* Code blocks. Dark in both themes. */
+  --adb-color-code-text: #E4E8EE; /* Text in code blocks. */
+  --adb-color-code-comment: #8B95A5; /* Comments in code blocks. */
+  --adb-color-inline-code-bg: #F0F4F8; /* Background of inline code in running text. */
+  --adb-color-inline-code-text: #0066CC; /* Inline code in running text. */
+  color-scheme: light;
+
+  --adb-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; /* Body font stack. Docs site: --font-body. */
+  --adb-font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Heading font stack. Docs site: --font-heading. */
+  --adb-font-code: 'JetBrains Mono', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; /* Code font stack. Docs site: --font-code. */
+  --adb-size-xs: 0.75rem; /* Type scale: labels, badges. */
+  --adb-size-sm: 0.875rem; /* Type scale: dense UI, code. */
+  --adb-size-md: 1rem; /* Type scale: body text. */
+  --adb-size-lg: 1.125rem; /* Type scale: lead text. */
+  --adb-size-xl: 1.25rem; /* Type scale: h4. */
+  --adb-size-2xl: 1.5rem; /* Type scale: h3. */
+  --adb-size-3xl: 1.875rem; /* Type scale: h2. */
+  --adb-size-4xl: 2.25rem; /* Type scale: h1. */
+  --adb-line-height-body: 1.6; /* Line height for running text. */
+  --adb-line-height-tight: 1.25; /* Line height for headings and dense UI. */
+  --adb-space-1: 0.25rem; /* Spacing scale, 4px steps. */
+  --adb-space-2: 0.5rem; /* Spacing scale. */
+  --adb-space-3: 0.75rem; /* Spacing scale. */
+  --adb-space-4: 1rem; /* Spacing scale. */
+  --adb-space-6: 1.5rem; /* Spacing scale. */
+  --adb-space-8: 2rem; /* Spacing scale. */
+  --adb-space-12: 3rem; /* Spacing scale. */
+  --adb-space-16: 4rem; /* Spacing scale. */
+  --adb-radius-sm: 4px; /* Small controls, inline code. */
+  --adb-radius-md: 6px; /* Inputs, buttons, cards. The value both sites use most. */
+  --adb-radius-lg: 8px; /* Dialogs and large panels. */
+  --adb-radius-pill: 9999px; /* Badges and chips. */
+  --adb-focus-width: 2px; /* Focus ring width. */
+  --adb-focus-offset: 2px; /* Gap between an element and its focus ring. */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --adb-color-bg: #0F1217;
+    --adb-color-bg-subtle: #151920;
+    --adb-color-bg-accent: #1C222C;
+    --adb-color-surface: #1D232C;
+    --adb-color-card: #1A1F27;
+    --adb-color-brand-tint: #1A3A4A;
+    --adb-color-border: #2C3440;
+    --adb-color-border-subtle: #232A34;
+    --adb-color-border-strong: #6B7788;
+    --adb-color-text: #E8ECF2;
+    --adb-color-text-muted: #AEB8C6;
+    --adb-color-brand: #29B6F6;
+    --adb-color-brand-hover: #4FC3F7;
+    --adb-color-brand-border: #29B6F6;
+    --adb-color-brand-text: #29B6F6;
+    --adb-color-brand-text-hover: #4FC3F7;
+    --adb-color-on-brand: #0B1D29;
+    --adb-color-link: #6DB3FF;
+    --adb-color-link-hover: #9CCBFF;
+    --adb-color-focus: #8CC8FF;
+    --adb-color-danger: #FF8A80;
+    --adb-color-success: #34D399;
+    --adb-color-warning: #FBBF24;
+    --adb-color-code-bg: #0B0D11;
+    --adb-color-code-text: #E4E8EE;
+    --adb-color-code-comment: #8B95A5;
+    --adb-color-inline-code-bg: #232A36;
+    --adb-color-inline-code-text: #8CC8FF;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --adb-color-bg: #0F1217;
+  --adb-color-bg-subtle: #151920;
+  --adb-color-bg-accent: #1C222C;
+  --adb-color-surface: #1D232C;
+  --adb-color-card: #1A1F27;
+  --adb-color-brand-tint: #1A3A4A;
+  --adb-color-border: #2C3440;
+  --adb-color-border-subtle: #232A34;
+  --adb-color-border-strong: #6B7788;
+  --adb-color-text: #E8ECF2;
+  --adb-color-text-muted: #AEB8C6;
+  --adb-color-brand: #29B6F6;
+  --adb-color-brand-hover: #4FC3F7;
+  --adb-color-brand-border: #29B6F6;
+  --adb-color-brand-text: #29B6F6;
+  --adb-color-brand-text-hover: #4FC3F7;
+  --adb-color-on-brand: #0B1D29;
+  --adb-color-link: #6DB3FF;
+  --adb-color-link-hover: #9CCBFF;
+  --adb-color-focus: #8CC8FF;
+  --adb-color-danger: #FF8A80;
+  --adb-color-success: #34D399;
+  --adb-color-warning: #FBBF24;
+  --adb-color-code-bg: #0B0D11;
+  --adb-color-code-text: #E4E8EE;
+  --adb-color-code-comment: #8B95A5;
+  --adb-color-inline-code-bg: #232A36;
+  --adb-color-inline-code-text: #8CC8FF;
+  color-scheme: dark;
+}
